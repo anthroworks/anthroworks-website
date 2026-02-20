@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Collaborative Design Practice &mdash; AnthroWorks.</title>
+  <meta name="description" content="Design is not something done for communities — it is something done with them. Exploring participatory design methodologies rooted in African knowledge systems.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="../assets/icon-logo.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .domain-hero {
+      padding-top: 10rem;
+      padding-bottom: clamp(4rem, 8vw, 6rem);
+    }
+    .domain-hero__back {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.25rem;
+    }
+    .domain-hero__number {
+      display: block;
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .domain-hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+    .domain-hero__lead {
+      font-family: var(--font-heading);
+      font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--text-light);
+      max-width: 640px;
+    }
+    .domain-body {
+      max-width: 720px;
+      padding-bottom: clamp(4rem, 8vw, 7rem);
+    }
+    .domain-body p {
+      font-size: 1.0625rem;
+      line-height: 1.85;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+      max-width: none;
+    }
+    .domain-body h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+    }
+    .domain-body blockquote {
+      font-family: var(--font-heading);
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--text);
+      border-left: 3px solid var(--text);
+      padding-left: 1.5rem;
+      margin: 2.5rem 0;
+    }
+    .domain-topics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 2rem 0 3rem;
+    }
+    .domain-topics span {
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      padding: 0.4rem 0.9rem;
+      border: 1px solid var(--border);
+      color: var(--text-light);
+    }
+    .domain-threads {
+      border-top: 1px solid var(--border);
+      padding-top: 3rem;
+      margin-top: 2rem;
+    }
+    .domain-threads h2 {
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+    a.domain-thread, .domain-thread {
+      display: block;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+      transition: opacity 0.3s;
+    }
+    a.domain-thread:hover { opacity: 0.7; }
+    .domain-thread h3 {
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+    .domain-thread p {
+      font-size: 0.875rem;
+      color: var(--text-light);
+      line-height: 1.6;
+      margin-bottom: 0.5rem;
+    }
+    .domain-thread__meta {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      display: flex;
+      gap: 1.5rem;
+    }
+    .domain-references { border-top: 1px solid var(--border); padding-top: 2.5rem; margin-top: 3rem; }
+    .domain-references h2 { font-size: 1.125rem; margin-top: 0; margin-bottom: 1.5rem; }
+    .domain-references p { font-size: 0.8125rem; line-height: 1.7; color: var(--text-light); margin-bottom: 0.75rem; padding-left: 2rem; text-indent: -2rem; }
+    .domain-cta {
+      background: var(--bg-alt);
+      padding: clamp(4rem, 8vw, 6rem) 0;
+    }
+    .domain-cta__inner {
+      max-width: 600px;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .domain-cta h2 { margin-bottom: 1rem; }
+    .domain-cta p {
+      font-size: 0.9375rem;
+      color: var(--text-light);
+      line-height: 1.7;
+      margin: 0 auto 2rem;
+    }
+    .domain-nav {
+      border-top: 1px solid var(--border);
+      padding: clamp(2rem, 4vw, 3rem) 0;
+    }
+    .domain-nav__inner {
+      max-width: 720px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .domain-nav a {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">AnthroWorks.</a>
+      <div class="nav__links" id="navLinks">
+        <a href="../index.html#about">About</a>
+        <a href="../manifesto.html">Manifesto</a>
+        <a href="../think-tank.html">Think Tank</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+      <div class="nav__socials">
+        <a href="https://x.com/anthroworks" target="_blank" rel="noopener">X</a>
+        <a href="https://www.linkedin.com/company/anthroworks" target="_blank" rel="noopener">in</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+  <section class="domain-hero">
+    <div class="container">
+      <a href="../think-tank.html" class="domain-hero__back">&larr; Back to Think Tank</a>
+      <span class="domain-hero__number">Domain 01</span>
+      <h1>Collaborative Design Practice</h1>
+      <p class="domain-hero__lead">Design is not something done <em>for</em> communities &mdash; it is something done <em>with</em> them.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <div class="container">
+    <div class="domain-body">
+
+      <div class="domain-topics">
+        <span>Participatory Design</span>
+        <span>Co-creation</span>
+        <span>Ubuntu Methodology</span>
+        <span>Community Workshops</span>
+        <span>Shared Authorship</span>
+        <span>Decolonised Pedagogy</span>
+      </div>
+
+      <p>This domain explores participatory design methodologies rooted in African knowledge systems, where authorship is shared and outcomes serve collective needs. We investigate how design practice can move beyond the extractive models that have dominated Western design education &mdash; models where the designer arrives, observes, and leaves with &ldquo;insights&rdquo; that benefit institutions rather than communities.</p>
+
+      <p>South Africa has a long history of community-based creative practice that challenges this extraction. The Community Arts Project (CAP), founded in Cape Town in 1977 as a direct response to the 1976 Youth Uprising, operated for over three decades as the Western Cape&rsquo;s premier participatory arts organisation (South African History Online, n.d.). CAP merged with the Media Project in 2004 and closed in 2008, but its archive &mdash; now held at the University of the Western Cape &mdash; remains a foundational resource for understanding how collaborative art-making can function as civic infrastructure.</p>
+
+      <p>At AnthroWorks, we believe that the most meaningful design emerges from genuine collaboration. This means rethinking power dynamics, crediting contributions equitably, and measuring success not by aesthetic awards but by community impact.</p>
+
+      <h2>Key Questions</h2>
+
+      <blockquote>&ldquo;Can participatory design truly avoid extractive dynamics? Even with the best intentions, researchers enter communities with power. How do we design frameworks that genuinely redistribute authorship and benefit?&rdquo;</blockquote>
+
+      <p>How do we operationalise Ubuntu as a design methodology, rather than invoking it as a philosophical concept? Recent scholarship has begun to address this directly. Mekoa (2023) argues that Ubuntu philosophy can be mobilised to decolonise participatory research, moving beyond rhetoric towards practical methodological frameworks. At the ACM Participatory Design Conference in 2024, two papers explicitly mapped Ubuntu-informed approaches onto HCI practice &mdash; &ldquo;Embracing Ubuntu: Mapping Communal Ecologies in Participatory Design&rdquo; and &ldquo;Transformative Narratives: Fostering Ubuntu-Inspired Participatory Design Practices&rdquo; (ACM, 2024). These contributions signal that Ubuntu-informed design is an active and growing area of research, though practical frameworks remain in development.</p>
+
+      <p>What would assessment look like in a design curriculum that values collective authorship over individual brilliance? How do we build trust-based relationships with communities that have historical reasons to distrust researchers?</p>
+
+      <h2>Our Approach</h2>
+
+      <p>We work alongside communities as co-researchers, not subjects. Our workshops use creative practice &mdash; drawing, storytelling, material making &mdash; as research tools that are accessible regardless of formal education. We document processes as carefully as outcomes, because the relationships built during research are as valuable as the outputs produced.</p>
+
+      <p>We draw on traditions of community arts practice that have deep roots in South Africa &mdash; from CAP&rsquo;s legacy in Cape Town to the Hasso Plattner d-school Afrika at the University of Cape Town, Africa&rsquo;s leading design-thinking institute, which runs participatory and co-design projects grounded in local contexts. Contemporary initiatives in Durban and Johannesburg continue to position art-making as a form of civic participation, echoing what Ewing (2025) describes as the process of &ldquo;upgrading public space&rdquo; through community-centred design interventions.</p>
+
+      <h2>Who This Is For</h2>
+
+      <p>Design educators rethinking curricula. Cultural institutions seeking genuine community engagement. Brands that want to move beyond surface-level &ldquo;co-creation&rdquo; workshops. Researchers committed to ethical, reciprocal fieldwork. Anyone who believes that the best ideas come from the people closest to the problem.</p>
+
+      <div class="domain-references">
+        <h2>References</h2>
+        <p>ACM (2024). &lsquo;Embracing Ubuntu: Mapping Communal Ecologies in Participatory Design for HCI Practice&rsquo;, <em>Proceedings of the Participatory Design Conference 2024</em>. New York: Association for Computing Machinery.</p>
+        <p>ACM (2024). &lsquo;Transformative Narratives: Fostering Ubuntu-Inspired Participatory Design Practices&rsquo;, <em>Proceedings of the Participatory Design Conference 2024</em>. New York: Association for Computing Machinery.</p>
+        <p>Ewing, K. (2025). &lsquo;Upgrading public space in Cape Town&rsquo;, <em>Environment and Planning B: Urban Analytics and City Science</em>.</p>
+        <p>Mekoa, I. (2023). &lsquo;Decolonising participatory research: can Ubuntu philosophy contribute something?&rsquo;, <em>International Journal of Social Research Methodology</em>, 27(5).</p>
+        <p>South African History Online (n.d.). <em>Community Arts Project (CAP)</em>. Available at: sahistory.org.za (Accessed: 19 February 2026).</p>
+      </div>
+
+      <!-- Related Discussions -->
+      <div class="domain-threads">
+        <h2>Active Discussions</h2>
+
+        <a href="articles/participatory-design-extractive-dynamics.html" class="domain-thread">
+          <h3>Can participatory design truly avoid extractive dynamics?</h3>
+          <p>Even with the best intentions, researchers enter communities with power. How do we design frameworks that genuinely redistribute authorship and benefit?</p>
+          <div class="domain-thread__meta">
+            <span>Feb 18, 2026</span>
+            <span>Chad J. Payne</span>
+            <span>12 replies</span>
+          </div>
+        </a>
+
+        <a href="articles/ubuntu-as-methodology.html" class="domain-thread">
+          <h3>Ubuntu as methodology: beyond philosophy into practice</h3>
+          <p>Ubuntu is often invoked as a concept but rarely operationalised as a research method. What would a genuinely Ubuntu-informed design process look like?</p>
+          <div class="domain-thread__meta">
+            <span>Jan 20, 2026</span>
+            <span>Guest contributor</span>
+            <span>19 replies</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Join CTA -->
+  <section class="domain-cta">
+    <div class="container">
+      <div class="domain-cta__inner">
+        <h2>Contribute to This Domain</h2>
+        <p>Have experience in participatory design, community-centred research, or Ubuntu-informed practice? Join the Think Tank to share your perspective.</p>
+        <a href="../think-tank.html#signup" class="btn">Join the Think Tank</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation -->
+  <nav class="domain-nav">
+    <div class="container">
+      <div class="domain-nav__inner">
+        <a href="../think-tank.html">&larr; All Domains</a>
+        <a href="eco-human-design-centered.html">Eco-Human Design &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="../index.html" class="footer__logo">AnthroWorks.</a>
+        <div class="footer__socials">
+          <a href="https://x.com/anthroworks" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/company/anthroworks" target="_blank" rel="noopener">in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle')?.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+    window.addEventListener('scroll', () => {
+      document.querySelector('.nav').classList.toggle('nav--scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>

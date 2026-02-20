@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI in Cultural Research: Tool, Collaborator, or Threat? &mdash; AnthroWorks.</title>
+  <meta name="description" content="We're using AI to process qualitative data, generate visual research, and map cultural patterns. But where does the human researcher end and the machine begin?">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="../../assets/icon-logo.png">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .article-hero { padding-top: 10rem; padding-bottom: clamp(3rem, 6vw, 5rem); }
+    .article-hero__back { display: inline-block; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.25rem; }
+    .article-hero__date { font-size: 0.9375rem; color: var(--text-light); margin-bottom: 1rem; }
+    .article-hero__domain { font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); display: inline-block; padding: 0.3rem 0.75rem; border: 1px solid var(--border); margin-bottom: 1rem; }
+    .article-hero h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); max-width: 800px; margin-bottom: 1.5rem; }
+    .article-hero__subtitle { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 400; font-style: italic; line-height: 1.5; color: var(--text-light); max-width: 640px; }
+    .article-body { max-width: 720px; margin: 0 auto; padding-bottom: clamp(5rem, 10vw, 9rem); }
+    .article-body p { font-size: 1.0625rem; line-height: 1.85; color: var(--text); margin-bottom: 1.5rem; max-width: none; }
+    .article-body h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-top: 3rem; margin-bottom: 1.25rem; }
+    .article-body blockquote { font-family: var(--font-heading); font-size: clamp(1.25rem, 2.5vw, 1.75rem); font-weight: 700; line-height: 1.3; color: var(--text); border-left: 3px solid var(--text); padding-left: 1.5rem; margin: 2.5rem 0; }
+    .article-body figure { margin: 2.5rem 0; }
+    .article-body figcaption { font-size: 0.8125rem; color: var(--text-muted); margin-top: 0.75rem; line-height: 1.5; }
+    .article-body figure img { width: 100%; }
+    .article-meta { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; display: flex; justify-content: space-between; align-items: start; }
+    .article-meta__author { font-size: 0.875rem; color: var(--text-light); }
+    .article-meta__author strong { color: var(--text); font-weight: 600; display: block; margin-bottom: 0.25rem; }
+    .article-meta__share { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text); }
+    .article-nav { border-top: 1px solid var(--border); padding: clamp(2rem, 4vw, 3rem) 0; }
+    .article-nav__inner { max-width: 720px; margin: 0 auto; display: flex; justify-content: space-between; }
+    .article-nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="../../index.html" class="nav__logo">AnthroWorks.</a>
+      <div class="nav__links" id="navLinks">
+        <a href="../../index.html#about">About</a>
+        <a href="../../manifesto.html">Manifesto</a>
+        <a href="../../think-tank.html">Think Tank</a>
+        <a href="../../publications.html">Publications</a>
+        <a href="../../index.html#contact">Contact</a>
+      </div>
+      <div class="nav__socials">
+        <a href="https://x.com/anthroworks" target="_blank" rel="noopener">X</a>
+        <a href="https://www.linkedin.com/company/anthroworks" target="_blank" rel="noopener">in</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+  <section class="article-hero">
+    <div class="container">
+      <a href="../../think-tank.html" class="article-hero__back">&larr; Back to Think Tank</a>
+      <p class="article-hero__date">Feb 5, 2026</p>
+      <span class="article-hero__domain">AI Technology &amp; Sciences</span>
+      <h1>AI in Cultural Research: Tool, Collaborator, or Threat?</h1>
+      <p class="article-hero__subtitle">We&rsquo;re using AI to process qualitative data, generate visual research, and map cultural patterns. But where does the human researcher end and the machine begin?</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="article-body">
+
+      <p>The integration of artificial intelligence into cultural research is no longer hypothetical. Researchers are already using AI to transcribe interviews, code qualitative data, generate visual outputs, identify patterns in large datasets, and even draft preliminary analyses. The question is no longer whether AI will transform cultural research but how &mdash; and whether the transformation will serve the communities that research claims to represent.</p>
+
+      <p>This is not a neutral technical development. Every tool embeds the assumptions of its makers. When we use AI to process qualitative data about African cultural practices, we are running that data through systems trained predominantly on Western, English-language texts, built by engineers in Silicon Valley, and optimised for patterns that may not map onto the phenomena we are trying to understand.</p>
+
+      <h2>The Qualitative Research Toolkit</h2>
+
+      <p>The two dominant platforms for qualitative data analysis &mdash; NVivo and ATLAS.ti &mdash; were merged under Lumivero in 2024, consolidating the market for computer-assisted qualitative data analysis software (CAQDAS). Both platforms have increasingly incorporated AI features: automated coding suggestions, sentiment analysis, pattern recognition, and natural language processing. These features promise to accelerate research workflows that have traditionally been labour-intensive and time-consuming.</p>
+
+      <p>The promise is real. A researcher working with hundreds of hours of interview transcripts can use AI-assisted coding to identify preliminary themes in a fraction of the time it would take to code manually. Visual pattern recognition can surface connections across large image datasets that a human researcher might miss. Language processing tools can work across multiple languages, making multilingual research more feasible.</p>
+
+      <p>But the risks are equally real. Automated coding systems learn from existing codebooks, which means they tend to reproduce the analytical frameworks they were trained on rather than allowing new frameworks to emerge from the data. This is particularly problematic in cross-cultural research, where the most important insights often come from patterns that do not fit existing Western categories.</p>
+
+      <blockquote>&ldquo;The danger is not that AI will replace cultural researchers. The danger is that it will make cultural research more efficient at asking the wrong questions.&rdquo;</blockquote>
+
+      <h2>Algorithmic Injustice and Relational Ethics</h2>
+
+      <p>Abeba Birhane&rsquo;s work on algorithmic injustice offers a crucial framework for understanding what is at stake. Birhane (2021) argues that the dominant approach to AI ethics &mdash; which focuses on individual fairness, bias mitigation, and transparency &mdash; is insufficient because it operates within the same individualist ontological framework that produced the problems in the first place. Drawing on Ubuntu and relational ethics, Birhane proposes that AI systems should be evaluated not by whether they treat individuals fairly in isolation but by whether they strengthen or weaken the web of relationships that constitute community life.</p>
+
+      <p>This is a profound reframing. It means that an AI tool used in cultural research cannot be evaluated solely by its technical accuracy or its efficiency. It must be evaluated by its relational effects: does it strengthen the relationship between researcher and community? Does it make community members more or less visible in the research process? Does it concentrate analytical power in the hands of the researcher or distribute it?</p>
+
+      <h2>Decolonial AI: The Bantucracy Framework</h2>
+
+      <p>Sabelo Mhlambi&rsquo;s Bantucracy project represents one of the most ambitious attempts to develop AI frameworks grounded in African philosophical traditions. Mhlambi argues that the current AI paradigm &mdash; which prioritises efficiency, optimisation, and scale &mdash; reflects a specific cultural logic that is neither universal nor inevitable. An AI paradigm grounded in Ubuntu would prioritise relational wellbeing, collective benefit, and the strengthening of community bonds.</p>
+
+      <p>This is not a rejection of AI technology. It is a call for AI technology to be developed and deployed within different value systems. The Centre for Intellectual Property and Information Technology Law (CIPIT) at Strathmore University in Nairobi has been at the forefront of this work, developing frameworks for ethical AI deployment across Africa that centre community consent, data sovereignty, and collective benefit rather than individual privacy alone.</p>
+
+      <h2>Participant Confidentiality in the Age of AI</h2>
+
+      <p>One of the most pressing concerns is participant confidentiality. When qualitative data &mdash; interview transcripts, field notes, photographs, audio recordings &mdash; is processed through AI systems, it enters a technical infrastructure that the researcher may not fully understand or control. Cloud-based AI processing means that sensitive community data may be stored on servers in jurisdictions with different privacy laws. Machine learning systems may retain traces of the data they process, creating potential pathways for re-identification.</p>
+
+      <p>For cultural researchers working with marginalised communities, these are not abstract concerns. Communities that have experienced generations of surveillance, extraction, and exploitation have every reason to distrust systems that promise efficiency while moving their data through opaque technical architectures. The burden is on researchers to demonstrate that their use of AI tools does not compromise the trust that participants have placed in them.</p>
+
+      <h2>A Path Forward</h2>
+
+      <p>None of this means that AI should be avoided in cultural research. It means that its adoption must be deliberate, critical, and community-informed. Researchers should be transparent with participants about which AI tools are used and how data is processed. Communities should have meaningful input into whether and how AI is deployed in research that concerns them. And the field as a whole needs to develop ethical frameworks that go beyond individual consent to address collective data rights and relational accountability.</p>
+
+      <p>AI is a tool. Like all tools, it reflects the values of the hand that wields it. The challenge for cultural researchers is to ensure that the hand remains human &mdash; and that the values it carries are shaped by the communities the research serves, not by the corporations that build the tools.</p>
+
+      <h2>References</h2>
+
+      <p>Birhane, A. (2021) &lsquo;Algorithmic Injustice: A Relational Ethics Approach&rsquo;, <em>Patterns</em>, 2(2), pp. 1&ndash;9.</p>
+
+      <p>CIPIT (2023) <em>Artificial Intelligence for Africa: Frameworks for Ethical Deployment</em>. Nairobi: Strathmore University Centre for Intellectual Property and Information Technology Law.</p>
+
+      <p>Mhlambi, S. (2020) &lsquo;From Rationality to Relationality: Ubuntu as an Ethical and Human Rights Framework for Artificial Intelligence Governance&rsquo;, <em>Carr Center Discussion Paper Series</em>, 2020-009. Cambridge, MA: Harvard Kennedy School.</p>
+
+      <p>Silver, C. and Lewins, A. (2014) <em>Using Software in Qualitative Research: A Step-by-Step Guide</em>. 2nd edn. London: SAGE Publications.</p>
+
+      <div class="article-meta">
+        <div class="article-meta__author">
+          <strong>Chad J. Payne</strong>
+          Founder & Research Director, AnthroWorks
+        </div>
+        <a href="https://x.com/anthroworks" target="_blank" rel="noopener" class="article-meta__share">Share on X &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="article-nav">
+    <div class="container">
+      <div class="article-nav__inner">
+        <a href="indigenous-ecological-knowledge.html">&larr; Previous</a>
+        <a href="durban-cultural-laboratory.html">Next &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="../../index.html" class="footer__logo">AnthroWorks.</a>
+        <div class="footer__socials">
+          <a href="https://x.com/anthroworks" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/company/anthroworks" target="_blank" rel="noopener">in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle')?.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+    window.addEventListener('scroll', () => {
+      document.querySelector('.nav').classList.toggle('nav--scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eco-Human Design Centered &mdash; AnthroWorks.</title>
+  <meta name="description" content="How do we design with the Earth, not against it? Investigating entangled relationships between human systems and ecological futures.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="../assets/icon-logo.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .domain-hero { padding-top: 10rem; padding-bottom: clamp(4rem, 8vw, 6rem); }
+    .domain-hero__back { display: inline-block; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.25rem; }
+    .domain-hero__number { display: block; font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .domain-hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); max-width: 700px; margin-bottom: 1.5rem; }
+    .domain-hero__lead { font-family: var(--font-heading); font-size: clamp(1.15rem, 2.2vw, 1.5rem); font-weight: 400; font-style: italic; line-height: 1.5; color: var(--text-light); max-width: 640px; }
+    .domain-body { max-width: 720px; padding-bottom: clamp(4rem, 8vw, 7rem); }
+    .domain-body p { font-size: 1.0625rem; line-height: 1.85; color: var(--text); margin-bottom: 1.5rem; max-width: none; }
+    .domain-body h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-top: 3rem; margin-bottom: 1.25rem; }
+    .domain-body blockquote { font-family: var(--font-heading); font-size: clamp(1.25rem, 2.5vw, 1.75rem); font-weight: 700; line-height: 1.3; color: var(--text); border-left: 3px solid var(--text); padding-left: 1.5rem; margin: 2.5rem 0; }
+    .domain-topics { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 2rem 0 3rem; }
+    .domain-topics span { font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.06em; padding: 0.4rem 0.9rem; border: 1px solid var(--border); color: var(--text-light); }
+    .domain-threads { border-top: 1px solid var(--border); padding-top: 3rem; margin-top: 2rem; }
+    .domain-threads h2 { margin-top: 0; margin-bottom: 2rem; }
+    a.domain-thread, .domain-thread { display: block; padding: 1.5rem 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; transition: opacity 0.3s; }
+    a.domain-thread:hover { opacity: 0.7; }
+    .domain-thread h3 { font-size: 1.125rem; margin-bottom: 0.5rem; }
+    .domain-thread p { font-size: 0.875rem; color: var(--text-light); line-height: 1.6; margin-bottom: 0.5rem; }
+    .domain-thread__meta { font-size: 0.75rem; color: var(--text-muted); display: flex; gap: 1.5rem; }
+    .domain-references { border-top: 1px solid var(--border); padding-top: 2.5rem; margin-top: 3rem; }
+    .domain-references h2 { font-size: 1.125rem; margin-top: 0; margin-bottom: 1.5rem; }
+    .domain-references p { font-size: 0.8125rem; line-height: 1.7; color: var(--text-light); margin-bottom: 0.75rem; padding-left: 2rem; text-indent: -2rem; }
+    .domain-cta { background: var(--bg-alt); padding: clamp(4rem, 8vw, 6rem) 0; }
+    .domain-cta__inner { max-width: 600px; text-align: center; margin: 0 auto; }
+    .domain-cta h2 { margin-bottom: 1rem; }
+    .domain-cta p { font-size: 0.9375rem; color: var(--text-light); line-height: 1.7; margin: 0 auto 2rem; }
+    .domain-nav { border-top: 1px solid var(--border); padding: clamp(2rem, 4vw, 3rem) 0; }
+    .domain-nav__inner { max-width: 720px; display: flex; justify-content: space-between; }
+    .domain-nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">AnthroWorks.</a>
+      <div class="nav__links" id="navLinks">
+        <a href="../index.html#about">About</a>
+        <a href="../manifesto.html">Manifesto</a>
+        <a href="../think-tank.html">Think Tank</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+      <div class="nav__socials">
+        <a href="https://x.com/anthroworks" target="_blank" rel="noopener">X</a>
+        <a href="https://www.linkedin.com/company/anthroworks" target="_blank" rel="noopener">in</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+  <section class="domain-hero">
+    <div class="container">
+      <a href="../think-tank.html" class="domain-hero__back">&larr; Back to Think Tank</a>
+      <span class="domain-hero__number">Domain 02</span>
+      <h1>Eco-Human Design Centered</h1>
+      <p class="domain-hero__lead">How do we design with the Earth, not against it?</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <div class="container">
+    <div class="domain-body">
+
+      <div class="domain-topics">
+        <span>Human-Nature Relations</span>
+        <span>Indigenous Ecology</span>
+        <span>Regenerative Design</span>
+        <span>Climate &amp; Culture</span>
+        <span>Material Culture</span>
+        <span>Environmental Aesthetics</span>
+      </div>
+
+      <p>This domain investigates the entangled relationships between human systems and ecological futures. We draw on indigenous ecological knowledge and contemporary environmental research to ask how design, art, and cultural practice can contribute to regenerative &mdash; not merely sustainable &mdash; futures. As Green (2020) argues in <em>Rock | Water | Life</em>, decolonising ecology in South Africa requires attending to the ways indigenous knowledge systems understand land, water, and life as interconnected rather than as separate resources to be managed.</p>
+
+      <p>The word &ldquo;sustainability&rdquo; assumes a system worth sustaining. Many of the systems we&rsquo;ve built are not. Southern Africa holds one of the richest documented medicinal plant knowledge systems in the world: a 2024 inventory recorded 3,640 medicinal species, 1,055 ritual species, and 911 species with dual medicinal and ritual use across eight southern African systems (Journal of Ethnopharmacology, 2024). Hutchings et al. documented extensive Zulu and Xhosa plant knowledge in <em>Zulu Medicinal Plants: An Inventory</em>, revealing how deeply ecological intelligence is embedded in cultural practice. Indigenous knowledge systems across the region offer frameworks that position the Earth not as a resource to be managed but as a relative to be cared for.</p>
+
+      <h2>Key Questions</h2>
+
+      <blockquote>&ldquo;The word &lsquo;sustainability&rsquo; assumes a system worth sustaining. What can indigenous knowledge systems teach us about regeneration instead of preservation?&rdquo;</blockquote>
+
+      <p>How do textile traditions encode ecological knowledge? The Xhosa people &mdash; known as the &ldquo;Red Blanket People&rdquo; for their distinctive red ochre-dyed <em>ingubo</em> &mdash; carry generations of environmental knowledge in their beadwork and textile production, where colours encode social information about marital status, age, and position, using natural dyes and locally sourced materials. The San, who possess one of the oldest continuous knowledge systems on Earth, developed complex ecological intelligence transmitted through apprenticeship and cultural practice across millennia (Food &amp; Trees for Africa, n.d.).</p>
+
+      <p>What does environmental change feel like in communities on the front lines of climate impact? The April 2022 KwaZulu-Natal floods killed at least 436 people and caused more than R17 billion in infrastructure damage. The World Weather Attribution service determined that climate change doubled the likelihood of the event and made rainfall 4&ndash;8% more intense than it would have been otherwise (World Weather Attribution, 2022). The floods disproportionately affected marginalised communities, particularly informal settlements &mdash; a reminder that climate is never separate from justice.</p>
+
+      <h2>Our Approach</h2>
+
+      <p>We approach ecology through culture. This means studying material culture &mdash; what people wear, build, grow, and make &mdash; as evidence of human-environment relationships. As Green (2013) established in <em>Contested Ecologies</em>, meaningful ecological research in southern Africa demands dialogue between scientific and indigenous knowledge traditions. We work with communities who carry generations of ecological intelligence in their practices: plant-based dye processes that map seasonal availability, agricultural traditions that maintain soil health, architectural forms that respond to climate conditions.</p>
+
+      <p>We collaborate with environmental scientists, indigenous knowledge holders, artists, and designers through institutions such as Environmental Humanities South at the University of Cape Town &mdash; directed by Lesley Green and home to the M.Phil in Environmental Humanities and the Critical Zones Africa project. Permaculture in Africa draws directly on indigenous knowledge systems: traditional farming practices like crop rotation, soil resting, and mulching align fundamentally with permaculture principles (Permaculture South Africa, n.d.). We produce research that sits at the intersection of ecological science and cultural practice &mdash; work that is both analytically rigorous and aesthetically compelling.</p>
+
+      <h2>Who This Is For</h2>
+
+      <p>Environmental researchers seeking cultural perspectives. Designers working on regenerative systems. Artists using creative practice as environmental research. Policymakers developing climate strategies that account for cultural context. Communities working to protect and transmit ecological knowledge systems.</p>
+
+      <div class="domain-references">
+        <h2>References</h2>
+        <p>Food &amp; Trees for Africa (n.d.). <em>Indigenous Knowledge Systems: Returning to South Africa&rsquo;s Roots</em>. Available at: trees.org.za (Accessed: 19 February 2026).</p>
+        <p>Green, L. (ed.) (2013). <em>Contested Ecologies: Dialogues in the South on Nature and Knowledge</em>. Cape Town: HSRC Press.</p>
+        <p>Green, L. (2020). <em>Rock | Water | Life: Ecology and Humanities for a Decolonising South Africa</em>. Durham: Duke University Press.</p>
+        <p>Hutchings, A. et al. (n.d.). <em>Zulu Medicinal Plants: An Inventory</em>. Pietermaritzburg: University of Natal Press.</p>
+        <p>Journal of Ethnopharmacology (2024). &lsquo;An updated inventory of medicinal and ritual plants of southern Africa&rsquo;, <em>Journal of Ethnopharmacology</em>.</p>
+        <p>Permaculture South Africa (n.d.). Available at: permaculturesouthafrica.co.za (Accessed: 19 February 2026).</p>
+        <p>World Weather Attribution (2022). <em>Climate change-exacerbated rainfall causing devastating flooding in Eastern South Africa</em>. Available at: worldweatherattribution.org (Accessed: 19 February 2026).</p>
+      </div>
+
+      <div class="domain-threads">
+        <h2>Active Discussions</h2>
+
+        <a href="articles/indigenous-ecological-knowledge.html" class="domain-thread">
+          <h3>Indigenous ecological knowledge and the limits of &ldquo;sustainability&rdquo;</h3>
+          <p>The word &ldquo;sustainability&rdquo; assumes a system worth sustaining. What can indigenous knowledge systems teach us about regeneration instead of preservation?</p>
+          <div class="domain-thread__meta">
+            <span>Feb 12, 2026</span>
+            <span>Guest contributor</span>
+            <span>8 replies</span>
+          </div>
+        </a>
+
+        <a href="articles/fashion-environmental-research.html" class="domain-thread">
+          <h3>Fashion as environmental research: material culture and climate</h3>
+          <p>When we study what people wear, we study their relationship to the land. Textile traditions encode centuries of ecological knowledge &mdash; how do we read them?</p>
+          <div class="domain-thread__meta">
+            <span>Jan 15, 2026</span>
+            <span>Chad J. Payne</span>
+            <span>7 replies</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="domain-cta">
+    <div class="container">
+      <div class="domain-cta__inner">
+        <h2>Contribute to This Domain</h2>
+        <p>Working at the intersection of ecology, culture, and design? We want to hear from researchers, practitioners, and communities with ecological knowledge to share.</p>
+        <a href="../think-tank.html#signup" class="btn">Join the Think Tank</a>
+      </div>
+    </div>
+  </section>
+
+  <nav class="domain-nav">
+    <div class="container">
+      <div class="domain-nav__inner">
+        <a href="collaborative-design-practice.html">&larr; Collaborative Design</a>
+        <a href="ai-technology-sciences.html">AI Technology &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="../index.html" class="footer__logo">AnthroWorks.</a>
+        <div class="footer__socials">
+          <a href="https://x.com/anthroworks" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/company/anthroworks" target="_blank" rel="noopener">in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle')?.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+    window.addEventListener('scroll', () => {
+      document.querySelector('.nav').classList.toggle('nav--scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>

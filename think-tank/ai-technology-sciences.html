@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Technology &amp; Sciences &mdash; AnthroWorks.</title>
+  <meta name="description" content="How emerging technologies can be integrated into cultural research workflows — ethically, practically, and with community alignment.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="../assets/icon-logo.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .domain-hero { padding-top: 10rem; padding-bottom: clamp(4rem, 8vw, 6rem); }
+    .domain-hero__back { display: inline-block; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.25rem; }
+    .domain-hero__number { display: block; font-family: var(--font-body); font-size: 0.75rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .domain-hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); max-width: 700px; margin-bottom: 1.5rem; }
+    .domain-hero__lead { font-family: var(--font-heading); font-size: clamp(1.15rem, 2.2vw, 1.5rem); font-weight: 400; font-style: italic; line-height: 1.5; color: var(--text-light); max-width: 640px; }
+    .domain-body { max-width: 720px; padding-bottom: clamp(4rem, 8vw, 7rem); }
+    .domain-body p { font-size: 1.0625rem; line-height: 1.85; color: var(--text); margin-bottom: 1.5rem; max-width: none; }
+    .domain-body h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-top: 3rem; margin-bottom: 1.25rem; }
+    .domain-body blockquote { font-family: var(--font-heading); font-size: clamp(1.25rem, 2.5vw, 1.75rem); font-weight: 700; line-height: 1.3; color: var(--text); border-left: 3px solid var(--text); padding-left: 1.5rem; margin: 2.5rem 0; }
+    .domain-topics { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 2rem 0 3rem; }
+    .domain-topics span { font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.06em; padding: 0.4rem 0.9rem; border: 1px solid var(--border); color: var(--text-light); }
+    .domain-threads { border-top: 1px solid var(--border); padding-top: 3rem; margin-top: 2rem; }
+    .domain-threads h2 { margin-top: 0; margin-bottom: 2rem; }
+    a.domain-thread, .domain-thread { display: block; padding: 1.5rem 0; border-bottom: 1px solid var(--border); text-decoration: none; color: inherit; transition: opacity 0.3s; }
+    a.domain-thread:hover { opacity: 0.7; }
+    .domain-thread h3 { font-size: 1.125rem; margin-bottom: 0.5rem; }
+    .domain-thread p { font-size: 0.875rem; color: var(--text-light); line-height: 1.6; margin-bottom: 0.5rem; }
+    .domain-thread__meta { font-size: 0.75rem; color: var(--text-muted); display: flex; gap: 1.5rem; }
+    .domain-references { border-top: 1px solid var(--border); padding-top: 2.5rem; margin-top: 3rem; }
+    .domain-references h2 { font-size: 1.125rem; margin-top: 0; margin-bottom: 1.5rem; }
+    .domain-references p { font-size: 0.8125rem; line-height: 1.7; color: var(--text-light); margin-bottom: 0.75rem; padding-left: 2rem; text-indent: -2rem; }
+    .domain-cta { background: var(--bg-alt); padding: clamp(4rem, 8vw, 6rem) 0; }
+    .domain-cta__inner { max-width: 600px; text-align: center; margin: 0 auto; }
+    .domain-cta h2 { margin-bottom: 1rem; }
+    .domain-cta p { font-size: 0.9375rem; color: var(--text-light); line-height: 1.7; margin: 0 auto 2rem; }
+    .domain-nav { border-top: 1px solid var(--border); padding: clamp(2rem, 4vw, 3rem) 0; }
+    .domain-nav__inner { max-width: 720px; display: flex; justify-content: space-between; }
+    .domain-nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">AnthroWorks.</a>
+      <div class="nav__links" id="navLinks">
+        <a href="../index.html#about">About</a>
+        <a href="../manifesto.html">Manifesto</a>
+        <a href="../think-tank.html">Think Tank</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+      <div class="nav__socials">
+        <a href="https://x.com/anthroworks" target="_blank" rel="noopener">X</a>
+        <a href="https://www.linkedin.com/company/anthroworks" target="_blank" rel="noopener">in</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+  <section class="domain-hero">
+    <div class="container">
+      <a href="../think-tank.html" class="domain-hero__back">&larr; Back to Think Tank</a>
+      <span class="domain-hero__number">Domain 03</span>
+      <h1>AI Technology &amp; Sciences</h1>
+      <p class="domain-hero__lead">AI is transforming how we research, create, and communicate. The question is whether we shape it &mdash; or it shapes us.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <div class="container">
+    <div class="domain-body">
+
+      <div class="domain-topics">
+        <span>AI for Researchers</span>
+        <span>Ethical AI</span>
+        <span>Creative Technology</span>
+        <span>Digital Literacy</span>
+        <span>Anthropocene</span>
+        <span>Human-Machine Relations</span>
+      </div>
+
+      <p>AI is transforming how we research, create, and communicate. This domain examines how emerging technologies can be integrated into cultural research workflows &mdash; ethically, practically, and with community alignment. We are not technologists first; we are researchers and cultural practitioners who recognise that AI is now part of the landscape we study.</p>
+
+      <p>The term &ldquo;Anthropocene&rdquo; was co-proposed by Paul Crutzen and Eugene Stoermer in 2000 to describe the geological era defined by human impact on the planet (Crutzen, 2002). It has since provoked a rich set of counter-proposals: Donna Haraway (2015) argues for the &ldquo;Chthulucene&rdquo; &mdash; emphasising multispecies entanglement and the imperative of &ldquo;making kin&rdquo; across species boundaries &mdash; while Anna Tsing (2015) studies how life persists in capitalism&rsquo;s damaged landscapes. At AnthroWorks, we engage with these framings to ask: what does it mean to be human when machines can think, create, and speak? We believe AI is not separate from humanity. It is an extension of it. But we need to learn how to communicate with it on terms that serve communities, not just corporations.</p>
+
+      <h2>Key Questions</h2>
+
+      <blockquote>&ldquo;We&rsquo;re using AI to process qualitative data, generate visual research, and map cultural patterns. But where does the human researcher end and the machine begin?&rdquo;</blockquote>
+
+      <p>How do we use AI as a research tool without flattening the nuance of cultural data? Tools like NVivo and ATLAS.ti &mdash; the two major qualitative data analysis platforms, now under a single umbrella following Lumivero&rsquo;s 2024 acquisition &mdash; incorporate AI features including automatic coding and natural-language document analysis. But as researchers using these tools, we must protect participant confidentiality and address AI use in ethics applications. The question is not whether to use AI, but how to use it responsibly.</p>
+
+      <p>What ethical frameworks should govern AI in community-based research? Birhane (2021) draws on Sub-Saharan African relational philosophies &mdash; including Ubuntu &mdash; to critique dominant AI ethics frameworks, arguing that algorithmic injustice stems from treating ethics as individual rather than relational. Mhlambi, founder of Bantucracy and affiliated with Stanford&rsquo;s Center for Comparative Studies in Race and Ethnicity, advances decolonial AI by applying African indigenous philosophy to ethical AI policy (Boston University, 2021). The Centre for Intellectual Property and Information Technology Law (CIPIT) at Strathmore University in Nairobi has published directly on integrating cultural values into African AI development (CIPIT, n.d.).</p>
+
+      <h2>Our Approach</h2>
+
+      <p>We are developing practical frameworks for AI integration in cultural research. This includes an AI Starter Course designed specifically for creative practitioners &mdash; not a technical bootcamp, but a guided introduction to the tools, workflows, and ethical considerations that matter when AI enters the cultural research space. We take cues from African AI literacy initiatives like the Deep Learning Indaba, founded in 2017 as the annual gathering of the African machine learning community, which has spawned national IndabaX events across the continent (Deep Learning Indaba, n.d.), and Masakhane NLP, a grassroots community developing natural language processing solutions for African languages.</p>
+
+      <p>We use AI in our own practice &mdash; for data processing, visual research, content generation, and pattern mapping &mdash; and we document what works, what fails, and what raises ethical questions. This domain is as much about honest reporting as it is about innovation. As Haraway (2016) writes in <em>Staying with the Trouble</em>, the challenge is not to master new technologies but to learn to &ldquo;stay with the trouble&rdquo; they produce.</p>
+
+      <h2>Who This Is For</h2>
+
+      <p>Cultural researchers exploring AI tools. Creative practitioners navigating the AI landscape. Educators building AI literacy programmes. Technologists seeking cultural and ethical perspectives. Anyone grappling with the question of what it means to be human in an age of artificial intelligence.</p>
+
+      <div class="domain-references">
+        <h2>References</h2>
+        <p>Birhane, A. (2021). &lsquo;Algorithmic Injustice: A Relational Ethics Approach&rsquo;, <em>Patterns</em>, 2(2).</p>
+        <p>Boston University (2021). &lsquo;Can an Ancient African Philosophy Save Us from AI Bias?&rsquo;, <em>BU Today</em>. Available at: bu.edu (Accessed: 19 February 2026).</p>
+        <p>CIPIT, Strathmore University (n.d.). <em>Ethical AI Development in Africa: Integrating Cultural Values and Addressing Global Disparities</em>. Available at: cipit.org (Accessed: 19 February 2026).</p>
+        <p>Crutzen, P.J. (2002). &lsquo;Geology of Mankind&rsquo;, <em>Nature</em>, 415, p. 23.</p>
+        <p>Deep Learning Indaba (n.d.). Available at: deeplearningindaba.com (Accessed: 19 February 2026).</p>
+        <p>Haraway, D. (2015). &lsquo;Anthropocene, Capitalocene, Plantationocene, Chthulucene: Making Kin&rsquo;, <em>Environmental Humanities</em>, 6(1), pp. 159&ndash;165.</p>
+        <p>Haraway, D. (2016). <em>Staying with the Trouble: Making Kin in the Chthulucene</em>. Durham: Duke University Press.</p>
+        <p>Tsing, A.L. (2015). <em>The Mushroom at the End of the World: On the Possibility of Life in Capitalist Ruins</em>. Princeton: Princeton University Press.</p>
+      </div>
+
+      <div class="domain-threads">
+        <h2>Active Discussions</h2>
+
+        <a href="articles/ai-cultural-research.html" class="domain-thread">
+          <h3>AI in cultural research: tool, collaborator, or threat?</h3>
+          <p>We&rsquo;re using AI to process qualitative data, generate visual research, and map cultural patterns. But where does the human researcher end and the machine begin?</p>
+          <div class="domain-thread__meta">
+            <span>Feb 5, 2026</span>
+            <span>Chad J. Payne</span>
+            <span>23 replies</span>
+          </div>
+        </a>
+
+        <a href="articles/ai-starter-course.html" class="domain-thread">
+          <h3>Building the AI Starter Course: what creative researchers actually need</h3>
+          <p>We&rsquo;re developing an AI course specifically for cultural practitioners. This thread collects input on what tools, frameworks, and ethical guardrails matter most.</p>
+          <div class="domain-thread__meta">
+            <span>Jan 8, 2026</span>
+            <span>Chad J. Payne</span>
+            <span>31 replies</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <section class="domain-cta">
+    <div class="container">
+      <div class="domain-cta__inner">
+        <h2>Contribute to This Domain</h2>
+        <p>Working with AI in research or creative practice? Building ethical frameworks for emerging technology? Join the conversation.</p>
+        <a href="../think-tank.html#signup" class="btn">Join the Think Tank</a>
+      </div>
+    </div>
+  </section>
+
+  <nav class="domain-nav">
+    <div class="container">
+      <div class="domain-nav__inner">
+        <a href="eco-human-design-centered.html">&larr; Eco-Human Design</a>
+        <a href="geopolitical-climates.html">Geo-Political Climates &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="../index.html" class="footer__logo">AnthroWorks.</a>
+        <div class="footer__socials">
+          <a href="https://x.com/anthroworks" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/company/anthroworks" target="_blank" rel="noopener">in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle')?.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+    window.addEventListener('scroll', () => {
+      document.querySelector('.nav').classList.toggle('nav--scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>

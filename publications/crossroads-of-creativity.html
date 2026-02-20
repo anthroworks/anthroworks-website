@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crossroads of Creativity &mdash; AnthroWorks.</title>
+  <meta name="description" content="Integrating Indigenous Knowledge and Contemporary Design in South African Academia. A research article exploring how art, identity, and culture intersect across the Global South.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="../assets/icon-logo.png">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .article-hero {
+      padding-top: 10rem;
+      padding-bottom: clamp(3rem, 6vw, 5rem);
+    }
+    .article-hero__back {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.25rem;
+    }
+    .article-hero__date {
+      font-size: 0.9375rem;
+      color: var(--text-light);
+      margin-bottom: 1rem;
+    }
+    .article-hero h1 {
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      max-width: 800px;
+      margin-bottom: 1.5rem;
+    }
+    .article-hero__subtitle {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--text-light);
+      max-width: 640px;
+    }
+    .article-cover {
+      width: 100%;
+      max-height: 600px;
+      object-fit: cover;
+      margin-bottom: clamp(3rem, 6vw, 5rem);
+    }
+    .article-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding-bottom: clamp(5rem, 10vw, 9rem);
+    }
+    .article-body p {
+      font-size: 1.0625rem;
+      line-height: 1.85;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+      max-width: none;
+    }
+    .article-body h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+    }
+    .article-body blockquote {
+      font-family: var(--font-heading);
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--text);
+      border-left: 3px solid var(--text);
+      padding-left: 1.5rem;
+      margin: 2.5rem 0;
+    }
+    .article-body figure {
+      margin: 2.5rem 0;
+    }
+    .article-body figcaption {
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+      line-height: 1.5;
+    }
+    .article-body figure img {
+      width: 100%;
+    }
+    .article-meta {
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      margin-top: 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+    }
+    .article-meta__author {
+      font-size: 0.875rem;
+      color: var(--text-light);
+    }
+    .article-meta__author strong {
+      color: var(--text);
+      font-weight: 600;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .article-meta__share {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+    .article-nav {
+      border-top: 1px solid var(--border);
+      padding: clamp(2rem, 4vw, 3rem) 0;
+    }
+    .article-nav__inner {
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+    }
+    .article-nav a {
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">AnthroWorks.</a>
+      <div class="nav__links" id="navLinks">
+        <a href="../index.html#about">About</a>
+        <a href="../manifesto.html">Manifesto</a>
+        <a href="../think-tank.html">Think Tank</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../index.html#contact">Contact</a>
+      </div>
+      <div class="nav__socials">
+        <a href="https://x.com/anthroworks" target="_blank" rel="noopener">X</a>
+        <a href="https://www.linkedin.com/company/anthroworks" target="_blank" rel="noopener">in</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- ===== ARTICLE HERO ===== -->
+  <section class="article-hero">
+    <div class="container">
+      <a href="../publications.html" class="article-hero__back">&larr; Back to Publications</a>
+      <p class="article-hero__date">1/20/26</p>
+      <h1>Crossroads of Creativity: Integrating Indigenous Knowledge and Contemporary Design in South African Academia</h1>
+      <p class="article-hero__subtitle">How South African creative practices are reshaping global conversations around identity, place, and cultural production.</p>
+    </div>
+  </section>
+
+  <!-- ===== COVER IMAGE ===== -->
+  <div class="container">
+    <img src="../assets/publications/abdoulaye-konate.jpg" alt="Abdoulaye Konat&eacute; textile artwork" class="article-cover">
+  </div>
+
+  <!-- ===== ARTICLE BODY ===== -->
+  <div class="container">
+    <div class="article-body">
+
+      <p>South Africa&rsquo;s creative industries exist at a unique crossroads. On one side, a rich tradition of indigenous knowledge systems &mdash; textile practices, oral storytelling, communal art-making, and spatial design rooted in centuries of cultural evolution. On the other, the institutions of contemporary design education, shaped largely by Western modernist frameworks that have historically marginalised these very traditions.</p>
+
+      <p>This article examines the tension between these two worlds and asks: what happens when we stop treating indigenous knowledge as source material to be &ldquo;integrated&rdquo; into Western design, and instead position it as a primary framework from which contemporary practice can learn?</p>
+
+      <h2>The Problem with Integration</h2>
+
+      <p>The language of &ldquo;integration&rdquo; itself reveals a power dynamic. It assumes a dominant system into which other knowledge must be folded. In South African design education, this often manifests as indigenous motifs applied to Western design structures &mdash; pattern-as-decoration rather than philosophy-as-foundation.</p>
+
+      <blockquote>&ldquo;We don&rsquo;t need to integrate indigenous knowledge into design. We need to recognise that indigenous knowledge <em>is</em> design.&rdquo;</blockquote>
+
+      <p>The artists and practitioners featured in this research challenge this hierarchy. They don&rsquo;t borrow from indigenous traditions; they think <em>through</em> them. Their work demonstrates that African knowledge systems contain sophisticated design methodologies &mdash; relational, participatory, ecological &mdash; that address challenges Western design theory is only now beginning to grapple with.</p>
+
+      <figure>
+        <img src="../assets/publications/boemo-diale.jpg" alt="Boemo Diale contemporary artwork">
+        <figcaption>Boemo Diale, contemporary mixed-media work exploring identity and material culture in post-apartheid South Africa.</figcaption>
+      </figure>
+
+      <h2>Case Studies: Working From Within</h2>
+
+      <p>Abdoulaye Konat&eacute;&rsquo;s textile installations demonstrate how traditional West African weaving techniques can operate as a form of political speech &mdash; monumental in scale, precise in craft, and deeply embedded in cultural meaning. His work doesn&rsquo;t reference tradition; it <em>extends</em> it into contemporary discourse.</p>
+
+      <p>Similarly, Salu Iwadi&rsquo;s Water Basin Totem project uses sculptural design to address water scarcity in African communities. The work is simultaneously aesthetic object, functional prototype, and cultural statement &mdash; collapsing the Western distinction between art, design, and utility that indigenous practices have never recognised.</p>
+
+      <figure>
+        <img src="../assets/publications/water-basin-totem.jpg" alt="Water Basin Totem by Salu Iwadi">
+        <figcaption>Salu Iwadi, Water Basin Totem. A design project that bridges utility, aesthetics, and cultural meaning. Image via Designboom.</figcaption>
+      </figure>
+
+      <h2>Toward a New Curriculum</h2>
+
+      <p>What would South African design education look like if it started from indigenous frameworks? Not as an elective module or a cultural studies add-on, but as the foundational methodology through which all design is taught?</p>
+
+      <p>This is not a theoretical question. Several institutions &mdash; including programmes at the University of Cape Town, Stellenbosch, and the Durban University of Technology &mdash; are beginning to experiment with curriculum structures that position Ubuntu philosophy, participatory methods, and ecological thinking as core design competencies.</p>
+
+      <p>The challenge is institutional inertia. Accreditation frameworks, industry expectations, and academic hierarchies all privilege Western design canons. Changing these systems requires not just new content but new structures &mdash; new ways of assessing, collaborating, and credentialing that reflect the relational, community-centred values of indigenous knowledge.</p>
+
+      <h2>The Role of AnthroWorks</h2>
+
+      <p>AnthroWorks sits at this crossroads deliberately. As a cultural research practice, we study how people, places, and culture shape each other. As a think tank, we develop frameworks that translate these insights into action &mdash; for educators, institutions, brands, and communities working to build more culturally grounded design practices.</p>
+
+      <p>This publication is the first in a series. Future articles will examine specific case studies in more depth, interview practitioners working at the intersection of indigenous knowledge and contemporary design, and propose concrete curriculum frameworks that institutions can adapt.</p>
+
+      <!-- Article meta -->
+      <div class="article-meta">
+        <div class="article-meta__author">
+          <strong>Chad J. Payne</strong>
+          Founder & Research Director, AnthroWorks
+        </div>
+        <a href="https://x.com/anthroworks" target="_blank" rel="noopener" class="article-meta__share">Share on X &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ===== ARTICLE NAV ===== -->
+  <nav class="article-nav">
+    <div class="container">
+      <div class="article-nav__inner">
+        <a href="../publications.html">&larr; All Publications</a>
+        <a href="bodies-that-speak-back.html">Next Article &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="../index.html" class="footer__logo">AnthroWorks.</a>
+        <div class="footer__socials">
+          <a href="https://x.com/anthroworks" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/company/anthroworks" target="_blank" rel="noopener">in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle')?.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+    window.addEventListener('scroll', () => {
+      document.querySelector('.nav').classList.toggle('nav--scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>

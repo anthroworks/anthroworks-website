@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building the AI Starter Course: What Creative Researchers Actually Need &mdash; AnthroWorks.</title>
+  <meta name="description" content="We're developing an AI course specifically for cultural practitioners. This thread collects input on what tools, frameworks, and ethical guardrails matter most.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="../../assets/icon-logo.png">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .article-hero { padding-top: 10rem; padding-bottom: clamp(3rem, 6vw, 5rem); }
+    .article-hero__back { display: inline-block; font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0.25rem; }
+    .article-hero__domain { font-size: 0.6875rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-muted); display: inline-block; padding: 0.3rem 0.75rem; border: 1px solid var(--border); margin-bottom: 1rem; }
+    .article-hero__date { font-size: 0.9375rem; color: var(--text-light); margin-bottom: 1rem; }
+    .article-hero h1 { font-size: clamp(2.25rem, 5vw, 3.5rem); max-width: 800px; margin-bottom: 1.5rem; }
+    .article-hero__subtitle { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 400; font-style: italic; line-height: 1.5; color: var(--text-light); max-width: 640px; }
+    .article-body { max-width: 720px; margin: 0 auto; padding-bottom: clamp(5rem, 10vw, 9rem); }
+    .article-body p { font-size: 1.0625rem; line-height: 1.85; color: var(--text); margin-bottom: 1.5rem; max-width: none; }
+    .article-body h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-top: 3rem; margin-bottom: 1.25rem; }
+    .article-body blockquote { font-family: var(--font-heading); font-size: clamp(1.25rem, 2.5vw, 1.75rem); font-weight: 700; line-height: 1.3; color: var(--text); border-left: 3px solid var(--text); padding-left: 1.5rem; margin: 2.5rem 0; }
+    .article-meta { border-top: 1px solid var(--border); padding-top: 2rem; margin-top: 3rem; display: flex; justify-content: space-between; align-items: start; }
+    .article-meta__author { font-size: 0.875rem; color: var(--text-light); }
+    .article-meta__author strong { color: var(--text); font-weight: 600; display: block; margin-bottom: 0.25rem; }
+    .article-meta__share { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text); }
+    .article-references { border-top: 1px solid var(--border); padding-top: 2.5rem; margin-top: 3rem; }
+    .article-references h2 { font-size: 1.125rem; margin-top: 0; margin-bottom: 1.5rem; }
+    .article-references p { font-size: 0.8125rem; line-height: 1.7; color: var(--text-light); margin-bottom: 0.75rem; padding-left: 2rem; text-indent: -2rem; }
+    .article-nav { border-top: 1px solid var(--border); padding: clamp(2rem, 4vw, 3rem) 0; }
+    .article-nav__inner { max-width: 720px; margin: 0 auto; display: flex; justify-content: space-between; }
+    .article-nav a { font-size: 0.75rem; font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase; }
+  </style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="../../index.html" class="nav__logo">AnthroWorks.</a>
+      <div class="nav__links" id="navLinks">
+        <a href="../../index.html#about">About</a>
+        <a href="../../manifesto.html">Manifesto</a>
+        <a href="../../think-tank.html">Think Tank</a>
+        <a href="../../publications.html">Publications</a>
+        <a href="../../index.html#contact">Contact</a>
+      </div>
+      <div class="nav__socials">
+        <a href="https://x.com/anthroworks" target="_blank" rel="noopener">X</a>
+        <a href="https://www.linkedin.com/company/anthroworks" target="_blank" rel="noopener">in</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+  <section class="article-hero">
+    <div class="container">
+      <a href="../../think-tank.html" class="article-hero__back">&larr; Back to Think Tank</a>
+      <span class="article-hero__domain">AI Technology &amp; Sciences</span>
+      <p class="article-hero__date">Jan 8, 2026</p>
+      <h1>Building the AI Starter Course: What Creative Researchers Actually Need</h1>
+      <p class="article-hero__subtitle">We&rsquo;re developing an AI course specifically for cultural practitioners. This thread collects input on what tools, frameworks, and ethical guardrails matter most.</p>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="article-body">
+
+      <p>There is no shortage of AI courses. Universities offer them. Tech companies run bootcamps. YouTube is saturated with tutorials. And yet, when we speak with cultural researchers, anthropologists, designers, and creative practitioners across Southern Africa, the overwhelming response is the same: none of these courses speak to what we actually do. The gap is not technical knowledge per se &mdash; it is contextual knowledge. How does AI fit into qualitative research workflows? What are the ethical implications of using machine learning on community-generated data? How do you use these tools without reproducing the extractive dynamics they were built on?</p>
+
+      <p>This is the problem we are trying to solve. AnthroWorks is developing an AI starter course designed specifically for cultural practitioners &mdash; people whose primary concern is not building algorithms but understanding how AI can serve (or undermine) research that centres human relationships, cultural knowledge, and community benefit.</p>
+
+      <h2>Learning from Africa&rsquo;s AI Community</h2>
+
+      <p>Any serious engagement with AI in the African context must begin with the communities already doing this work. The Deep Learning Indaba, founded in 2017, has become the continent&rsquo;s most significant gathering of machine learning researchers and practitioners. What began as a single event has spawned IndabaX satellite conferences across dozens of African countries, creating a distributed network of AI researchers who understand the specific challenges of working with African data, African languages, and African communities. The Indaba model &mdash; building local capacity rather than importing expertise &mdash; is precisely the approach our course aims to follow.</p>
+
+      <p>Equally significant is Masakhane, the grassroots community dedicated to natural language processing for African languages. Founded on the recognition that the vast majority of NLP research is conducted in English and a handful of other European languages, Masakhane has brought together researchers across the continent to build language technologies that actually serve African communities. Their work demonstrates a crucial principle: AI tools are only as useful as the data and languages they are trained on, and for most African cultural practitioners, the dominant tools are built on datasets that do not represent their realities.</p>
+
+      <blockquote>&ldquo;The question is not whether cultural researchers should use AI. It is whether the AI tools available were built with any awareness of the communities those researchers serve.&rdquo;</blockquote>
+
+      <h2>Tools That Already Exist</h2>
+
+      <p>Cultural practitioners do not need to build AI systems from scratch. They need to understand the AI capabilities already embedded in the tools they use &mdash; and the implications of those capabilities. NVivo and ATLAS.ti, the qualitative data analysis platforms that many researchers already rely on, have increasingly integrated AI-powered features: automated coding suggestions, sentiment analysis, pattern recognition across large qualitative datasets. These features can dramatically accelerate analysis, but they also introduce new risks. When an algorithm suggests thematic codes for interview transcripts, whose categories is it applying? When sentiment analysis is run on conversations conducted in isiZulu or Sesotho, how reliable are the results?</p>
+
+      <p>Our course will address these practical questions directly. Not as abstract ethical dilemmas, but as concrete workflow decisions that researchers face daily. When should you use AI-assisted coding? When should you turn it off? How do you validate machine-generated themes against community knowledge? How do you explain your use of AI tools to research participants in ways that maintain trust?</p>
+
+      <h2>The Anthropocene and the Algorithm</h2>
+
+      <p>The broader context for this work is the recognition that we are living through multiple simultaneous transformations. Crutzen&rsquo;s (2002) identification of the Anthropocene &mdash; the geological epoch defined by human impact on Earth systems &mdash; has fundamentally reframed how we understand the relationship between human activity and planetary futures. AI is part of this transformation: its energy consumption, its material infrastructure, its reshaping of labour and knowledge production are all ecological and political phenomena, not merely technical ones.</p>
+
+      <p>Haraway&rsquo;s (2016) call to &ldquo;stay with the trouble&rdquo; &mdash; to resist both uncritical techno-optimism and paralysing techno-pessimism &mdash; offers a useful orientation. Cultural practitioners do not need to become AI evangelists or AI sceptics. They need to become literate, critical, and capable users who can make informed decisions about when and how to deploy these tools in service of their research communities.</p>
+
+      <h2>Ethical Guardrails for Community-Based Research</h2>
+
+      <p>The ethical dimension of AI in community-based research cannot be an add-on module at the end of the course. It must be woven through every session. Key guardrails include: informed consent that specifically addresses AI processing of participant data; data sovereignty protocols that give communities control over how their knowledge is stored, analysed, and shared; transparency about the limitations and biases of AI tools; and a commitment to human interpretive authority &mdash; the principle that AI-generated analysis is always a starting point for human judgement, never a replacement for it.</p>
+
+      <p>We are building this course in public, and this thread is part of that process. What tools do you need to understand? What ethical questions keep you up at night? What would make an AI course actually useful for the work you do? The conversation is open.</p>
+
+      <div class="article-references">
+        <h2>References</h2>
+        <p>Crutzen, P.J. (2002) &lsquo;Geology of mankind&rsquo;, <em>Nature</em>, 415(6867), p. 23.</p>
+        <p>Haraway, D.J. (2016) <em>Staying with the Trouble: Making Kin in the Chthulucene</em>. Durham: Duke University Press.</p>
+        <p>Masakhane (no date) <em>A grassroots NLP community for Africa, by Africans</em>. Available at: https://www.masakhane.io (Accessed: 8 January 2026).</p>
+        <p>The Deep Learning Indaba (2017&ndash;) <em>Strengthening African Machine Learning</em>. Available at: https://deeplearningindaba.com (Accessed: 8 January 2026).</p>
+      </div>
+
+      <div class="article-meta">
+        <div class="article-meta__author">
+          <strong>Chad J. Payne</strong>
+          Founder &amp; Research Director, AnthroWorks
+        </div>
+        <a href="https://x.com/anthroworks" target="_blank" rel="noopener" class="article-meta__share">Share on X &rarr;</a>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="article-nav">
+    <div class="container">
+      <div class="article-nav__inner">
+        <a href="fashion-environmental-research.html">&larr; Previous</a>
+        <a href="who-tells-south-africas-story.html">Next &rarr;</a>
+      </div>
+    </div>
+  </nav>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="../../index.html" class="footer__logo">AnthroWorks.</a>
+        <div class="footer__socials">
+          <a href="https://x.com/anthroworks" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/company/anthroworks" target="_blank" rel="noopener">in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle')?.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+    window.addEventListener('scroll', () => {
+      document.querySelector('.nav').classList.toggle('nav--scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>
