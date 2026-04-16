@@ -2001,6 +2001,115 @@ a.tt-thread:hover { background: rgba(255,255,255,0.5); opacity: 1; }
   z-index: 1;
 }
 
+/* --- Notebook Accents (hand-drawn sketch cut-outs) --- */
+.notebook {
+  display: block;
+  max-width: 340px;
+  width: 100%;
+  margin: 0;
+  background: #fff;
+  padding: 12px 12px 28px;
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.04),
+    0 4px 14px rgba(0, 0, 0, 0.08),
+    0 18px 40px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transform: rotate(-1.4deg);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.notebook img {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: grayscale(0.25) contrast(1.05);
+}
+
+.notebook__caption {
+  display: block;
+  margin-top: 10px;
+  font-family: var(--font-serif, "Playfair Display", Georgia, serif);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.55);
+  letter-spacing: 0.02em;
+}
+
+/* "Tape" corner accent */
+.notebook::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-2deg);
+  width: 70px;
+  height: 18px;
+  background: rgba(214, 208, 188, 0.6);
+  border-left: 1px dashed rgba(0, 0, 0, 0.08);
+  border-right: 1px dashed rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  pointer-events: none;
+}
+
+.notebook:hover {
+  transform: rotate(-0.6deg) translateY(-3px);
+  box-shadow:
+    0 1px 0 rgba(0, 0, 0, 0.04),
+    0 8px 20px rgba(0, 0, 0, 0.12),
+    0 24px 50px rgba(0, 0, 0, 0.12);
+}
+
+.notebook--right {
+  transform: rotate(1.6deg);
+}
+.notebook--right:hover {
+  transform: rotate(0.8deg) translateY(-3px);
+}
+
+/* Homepage: notebook accent floating in operations section */
+.operations {
+  position: relative;
+}
+.operations__notebook {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* About page: inline notebook figure beside text blocks */
+.manifesto-body .notebook {
+  float: right;
+  margin: 0.5rem -2rem 1.5rem 2.5rem;
+  max-width: 300px;
+  clear: right;
+}
+
+.manifesto-body .notebook--left {
+  float: left;
+  margin: 0.5rem 2.5rem 1.5rem -2rem;
+  transform: rotate(-2deg);
+}
+.manifesto-body .notebook--left:hover {
+  transform: rotate(-1deg) translateY(-3px);
+}
+
+/* About: sketch card in founder area */
+.about__sketch {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (max-width: 900px) {
+  .manifesto-body .notebook,
+  .manifesto-body .notebook--left {
+    float: none;
+    margin: 2rem auto;
+    display: block;
+  }
+  .notebook { max-width: 280px; }
+}
+
 /* --- Responsive: 2026 Sections --- */
 @media (max-width: 900px) {
   .engines { grid-template-columns: 1fr; }
