@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact &mdash; AnthroWorks.</title>
+  <meta name="description" content="Get in touch with AnthroWorks. AI strategy, product development, cultural consulting, and partnership enquiries.">
+
+  <meta property="og:title" content="Contact — AnthroWorks.">
+  <meta property="og:description" content="Get in touch with AnthroWorks. AI strategy, product development, and partnership enquiries.">
+  <meta property="og:url" content="https://anthroworks.co.za/contact">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="assets/icon-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">AnthroWorks.</a>
+      <div class="nav__links" id="navLinks">
+        <a href="studio.html">Studio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="nav__active">Contact</a>
+      </div>
+      <div class="nav__socials">
+        <a href="https://x.com/anthroworks" target="_blank" rel="noopener">X</a>
+        <a href="https://www.linkedin.com/company/anthroworks" target="_blank" rel="noopener">in</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- ===== HERO ===== -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="label">Contact</span>
+      <h1>Let&rsquo;s talk.</h1>
+      <p class="page-hero__lead">Whether you&rsquo;re exploring AI strategy for your business, interested in partnership, or simply want to learn more about what we&rsquo;re building &mdash; we&rsquo;d like to hear from you.</p>
+    </div>
+  </section>
+
+  <hr class="divider">
+
+  <!-- ===== CONTACT FORM ===== -->
+  <section class="section">
+    <div class="container">
+      <div class="contact__layout">
+        <div class="contact__text">
+          <h2>Get in Touch</h2>
+          <p>We respond to every message personally. No chatbots, no auto-replies &mdash; just a considered response from a real person.</p>
+          <div class="contact__info">
+            <a href="mailto:chad@anthroworks.co.za">chad@anthroworks.co.za</a>
+            <span>Cape Town, South Africa</span>
+          </div>
+          <div class="contact__channels">
+            <h3>Connect</h3>
+            <div class="contact__channel-list">
+              <a href="https://x.com/anthroworks" target="_blank" rel="noopener">X (Twitter) &rarr;</a>
+              <a href="https://www.linkedin.com/company/anthroworks" target="_blank" rel="noopener">LinkedIn &rarr;</a>
+            </div>
+          </div>
+          <div class="contact__topics">
+            <h3>We can help with</h3>
+            <ul>
+              <li>AI strategy and implementation</li>
+              <li>Autonomous operations consulting</li>
+              <li>Cultural research and positioning</li>
+              <li>Product development partnerships</li>
+              <li>Investment enquiries (Studio)</li>
+            </ul>
+          </div>
+        </div>
+        <form class="contact__form" id="contactForm" action="#" method="POST">
+          <div class="form__row">
+            <div class="form__field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form__field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+          </div>
+          <div class="form__field">
+            <label for="company">Company <span style="color: var(--text-muted); font-weight: 400;">(optional)</span></label>
+            <input type="text" id="company" name="company">
+          </div>
+          <div class="form__field">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>Select a topic</option>
+              <option value="ai-strategy">AI Strategy &amp; Consulting</option>
+              <option value="partnership">Partnership Enquiry</option>
+              <option value="studio">Studio / Product Interest</option>
+              <option value="research">Cultural Research</option>
+              <option value="investment">Investment</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form__field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" required></textarea>
+          </div>
+          <button type="submit" class="btn">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="index.html" class="footer__logo">AnthroWorks.</a>
+        <div class="footer__nav">
+          <a href="studio.html">Studio</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div class="footer__socials">
+          <a href="https://x.com/anthroworks" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/company/anthroworks" target="_blank" rel="noopener">in</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>&copy; 2026 AnthroWorks. All rights reserved.</span>
+        <span>Cape Town, South Africa</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle')?.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+    window.addEventListener('scroll', () => {
+      document.querySelector('.nav').classList.toggle('nav--scrolled', window.scrollY > 50);
+    });
+
+    // Form handler (placeholder — replace with Cloudflare Worker endpoint)
+    document.getElementById('contactForm')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = e.target.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+
+      // TODO: Replace with actual Cloudflare Worker form endpoint
+      setTimeout(() => {
+        btn.textContent = 'Message Sent';
+        e.target.reset();
+        setTimeout(() => {
+          btn.textContent = 'Send Message';
+          btn.disabled = false;
+        }, 3000);
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

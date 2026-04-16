@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Think Tank &mdash; AnthroWorks.</title>
+  <meta name="description" content="AnthroWorks Think Tank is a discussion forum exploring the intersections of culture, ecology, technology, and society through applied research and creative practice.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,700;1,900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="assets/icon-logo.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav class="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">AnthroWorks.</a>
+      <div class="nav__links" id="navLinks">
+        <a href="index.html#about">About</a>
+        <a href="manifesto.html">Manifesto</a>
+        <a href="think-tank.html">Think Tank</a>
+        <a href="publications.html">Publications</a>
+        <a href="index.html#contact">Contact</a>
+      </div>
+      <div class="nav__socials">
+        <a href="https://x.com/anthroworks" target="_blank" rel="noopener">X</a>
+        <a href="https://www.linkedin.com/company/anthroworks" target="_blank" rel="noopener">in</a>
+      </div>
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+  <!-- ===== HERO ===== -->
+  <section class="tt-hero">
+    <div class="container">
+      <h1>Think Tank</h1>
+      <p>A space for discussion and inquiry. We explore the intersections of culture, ecology, technology, and society &mdash; asking the questions that matter about how people relate to each other, to place, and to the natural world.</p>
+      <button class="btn tt-hero__btn" id="openAccessBtn">Request Forum Access</button>
+    </div>
+  </section>
+
+  <!-- ===== DOMAIN BUTTONS ===== -->
+  <section class="tt-domains-nav">
+    <div class="container">
+      <div class="tt-domains-nav__grid">
+        <a href="think-tank/collaborative-design-practice.html" class="tt-domain-btn">
+          <span class="tt-domain-btn__number">01</span>
+          <span class="tt-domain-btn__title">Collaborative<br>Design Practice</span>
+          <span class="tt-domain-btn__arrow">&rarr;</span>
+        </a>
+        <a href="think-tank/eco-human-design-centered.html" class="tt-domain-btn">
+          <span class="tt-domain-btn__number">02</span>
+          <span class="tt-domain-btn__title">Eco-Human<br>Design Centered</span>
+          <span class="tt-domain-btn__arrow">&rarr;</span>
+        </a>
+        <a href="think-tank/ai-technology-sciences.html" class="tt-domain-btn">
+          <span class="tt-domain-btn__number">03</span>
+          <span class="tt-domain-btn__title">AI Technology<br>&amp; Sciences</span>
+          <span class="tt-domain-btn__arrow">&rarr;</span>
+        </a>
+        <a href="think-tank/geopolitical-climates.html" class="tt-domain-btn">
+          <span class="tt-domain-btn__number">04</span>
+          <span class="tt-domain-btn__title">Geo-Political<br>Climates</span>
+          <span class="tt-domain-btn__arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DISCUSSION FORUM ===== -->
+  <section class="tt-forum">
+    <div class="container">
+      <div class="tt-forum__header">
+        <h2>Discussions</h2>
+        <div class="tt-forum__categories">
+          <button class="tt-forum__cat tt-forum__cat--active" data-filter="all">All</button>
+          <button class="tt-forum__cat" data-filter="design">Design</button>
+          <button class="tt-forum__cat" data-filter="ecology">Ecology</button>
+          <button class="tt-forum__cat" data-filter="technology">Technology</button>
+          <button class="tt-forum__cat" data-filter="geopolitics">Geo-Politics</button>
+        </div>
+      </div>
+
+      <div class="tt-forum__threads">
+
+        <a href="think-tank/articles/participatory-design-extractive-dynamics.html" class="tt-thread" data-category="design">
+          <div>
+            <span class="tt-thread__domain">Collaborative Design Practice</span>
+            <h3 class="tt-thread__title">Can participatory design truly avoid extractive dynamics?</h3>
+            <p class="tt-thread__excerpt">Even with the best intentions, researchers enter communities with power. How do we design frameworks that genuinely redistribute authorship and benefit?</p>
+          </div>
+          <div class="tt-thread__meta">
+            <span class="tt-thread__date">Feb 18, 2026</span>
+            <span class="tt-thread__author">Chad J. Payne</span>
+            <span class="tt-thread__replies">12 replies</span>
+          </div>
+        </a>
+
+        <a href="think-tank/articles/indigenous-ecological-knowledge.html" class="tt-thread" data-category="ecology">
+          <div>
+            <span class="tt-thread__domain">Eco-Human Design Centered</span>
+            <h3 class="tt-thread__title">Indigenous ecological knowledge and the limits of &ldquo;sustainability&rdquo;</h3>
+            <p class="tt-thread__excerpt">The word &ldquo;sustainability&rdquo; assumes a system worth sustaining. What can indigenous knowledge systems teach us about regeneration instead of preservation?</p>
+          </div>
+          <div class="tt-thread__meta">
+            <span class="tt-thread__date">Feb 12, 2026</span>
+            <span class="tt-thread__author">Guest contributor</span>
+            <span class="tt-thread__replies">8 replies</span>
+          </div>
+        </a>
+
+        <a href="think-tank/articles/ai-cultural-research.html" class="tt-thread" data-category="technology">
+          <div>
+            <span class="tt-thread__domain">AI Technology &amp; Sciences</span>
+            <h3 class="tt-thread__title">AI in cultural research: tool, collaborator, or threat?</h3>
+            <p class="tt-thread__excerpt">We&rsquo;re using AI to process qualitative data, generate visual research, and map cultural patterns. But where does the human researcher end and the machine begin?</p>
+          </div>
+          <div class="tt-thread__meta">
+            <span class="tt-thread__date">Feb 5, 2026</span>
+            <span class="tt-thread__author">Chad J. Payne</span>
+            <span class="tt-thread__replies">23 replies</span>
+          </div>
+        </a>
+
+        <a href="think-tank/articles/durban-cultural-laboratory.html" class="tt-thread" data-category="geopolitics">
+          <div>
+            <span class="tt-thread__domain">Geo-Political Climates</span>
+            <h3 class="tt-thread__title">Durban as cultural laboratory: what the Indian Ocean teaches us about belonging</h3>
+            <p class="tt-thread__excerpt">Growing up on the east coast of South Africa means growing up between cultures. This thread explores how coastal geography shapes identity differently from inland cities.</p>
+          </div>
+          <div class="tt-thread__meta">
+            <span class="tt-thread__date">Jan 28, 2026</span>
+            <span class="tt-thread__author">Chad J. Payne</span>
+            <span class="tt-thread__replies">15 replies</span>
+          </div>
+        </a>
+
+        <a href="think-tank/articles/ubuntu-as-methodology.html" class="tt-thread" data-category="design">
+          <div>
+            <span class="tt-thread__domain">Collaborative Design Practice</span>
+            <h3 class="tt-thread__title">Ubuntu as methodology: beyond philosophy into practice</h3>
+            <p class="tt-thread__excerpt">Ubuntu is often invoked as a concept but rarely operationalised as a research method. What would a genuinely Ubuntu-informed design process look like?</p>
+          </div>
+          <div class="tt-thread__meta">
+            <span class="tt-thread__date">Jan 20, 2026</span>
+            <span class="tt-thread__author">Guest contributor</span>
+            <span class="tt-thread__replies">19 replies</span>
+          </div>
+        </a>
+
+        <a href="think-tank/articles/fashion-environmental-research.html" class="tt-thread" data-category="ecology">
+          <div>
+            <span class="tt-thread__domain">Eco-Human Design Centered</span>
+            <h3 class="tt-thread__title">Fashion as environmental research: material culture and climate</h3>
+            <p class="tt-thread__excerpt">When we study what people wear, we study their relationship to the land. Textile traditions encode centuries of ecological knowledge &mdash; how do we read them?</p>
+          </div>
+          <div class="tt-thread__meta">
+            <span class="tt-thread__date">Jan 15, 2026</span>
+            <span class="tt-thread__author">Chad J. Payne</span>
+            <span class="tt-thread__replies">7 replies</span>
+          </div>
+        </a>
+
+        <a href="think-tank/articles/ai-starter-course.html" class="tt-thread" data-category="technology">
+          <div>
+            <span class="tt-thread__domain">AI Technology &amp; Sciences</span>
+            <h3 class="tt-thread__title">Building the AI Starter Course: what creative researchers actually need</h3>
+            <p class="tt-thread__excerpt">We&rsquo;re developing an AI course specifically for cultural practitioners. This thread collects input on what tools, frameworks, and ethical guardrails matter most.</p>
+          </div>
+          <div class="tt-thread__meta">
+            <span class="tt-thread__date">Jan 8, 2026</span>
+            <span class="tt-thread__author">Chad J. Payne</span>
+            <span class="tt-thread__replies">31 replies</span>
+          </div>
+        </a>
+
+        <a href="think-tank/articles/who-tells-south-africas-story.html" class="tt-thread" data-category="geopolitics">
+          <div>
+            <span class="tt-thread__domain">Geo-Political Climates</span>
+            <h3 class="tt-thread__title">Who gets to tell South Africa&rsquo;s creative story?</h3>
+            <p class="tt-thread__excerpt">The creative industries are booming, but the narratives are still shaped by a small number of gatekeepers. What does a more distributed storytelling infrastructure look like?</p>
+          </div>
+          <div class="tt-thread__meta">
+            <span class="tt-thread__date">Dec 20, 2025</span>
+            <span class="tt-thread__author">Guest contributor</span>
+            <span class="tt-thread__replies">14 replies</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DOMAIN DETAILS ===== -->
+  <section class="tt-domains">
+    <div class="container container--narrow">
+
+      <div class="tt-domain" id="domain-1">
+        <div>
+          <span class="tt-domain__number">Domain 01</span>
+          <h3>Collaborative Design Practice</h3>
+        </div>
+        <div>
+          <p>Design is not something done <em>for</em> communities &mdash; it is something done <em>with</em> them. This domain explores participatory design methodologies rooted in African knowledge systems, where authorship is shared and outcomes serve collective needs.</p>
+          <div class="tt-domain__topics">
+            <span class="tt-domain__topic">Participatory Design</span>
+            <span class="tt-domain__topic">Co-creation</span>
+            <span class="tt-domain__topic">Ubuntu Methodology</span>
+            <span class="tt-domain__topic">Community Workshops</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tt-domain" id="domain-2">
+        <div>
+          <span class="tt-domain__number">Domain 02</span>
+          <h3>Eco-Human Design Centered</h3>
+        </div>
+        <div>
+          <p>How do we design with the Earth, not against it? This domain investigates the entangled relationships between human systems and ecological futures, drawing on indigenous ecological knowledge and contemporary environmental research.</p>
+          <div class="tt-domain__topics">
+            <span class="tt-domain__topic">Human-Nature Relations</span>
+            <span class="tt-domain__topic">Indigenous Ecology</span>
+            <span class="tt-domain__topic">Regenerative Design</span>
+            <span class="tt-domain__topic">Climate & Culture</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tt-domain" id="domain-3">
+        <div>
+          <span class="tt-domain__number">Domain 03</span>
+          <h3>AI Technology & Sciences</h3>
+        </div>
+        <div>
+          <p>AI is transforming how we research, create, and communicate. This domain examines how emerging technologies can be integrated into cultural research workflows &mdash; ethically, practically, and with community alignment.</p>
+          <div class="tt-domain__topics">
+            <span class="tt-domain__topic">AI for Researchers</span>
+            <span class="tt-domain__topic">Ethical AI</span>
+            <span class="tt-domain__topic">Creative Technology</span>
+            <span class="tt-domain__topic">Digital Literacy</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tt-domain" id="domain-4">
+        <div>
+          <span class="tt-domain__number">Domain 04</span>
+          <h3>Geo-Political Climates</h3>
+        </div>
+        <div>
+          <p>Geography is never neutral. This domain studies how political systems, borders, migration, and climate shape identity and cultural production across Africa and the Global South.</p>
+          <div class="tt-domain__topics">
+            <span class="tt-domain__topic">Cultural Geography</span>
+            <span class="tt-domain__topic">Post-Colonial Studies</span>
+            <span class="tt-domain__topic">Migration & Identity</span>
+            <span class="tt-domain__topic">Power & Space</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== JOIN THE CONVERSATION (second lead) ===== -->
+  <section class="tt-signup" id="signup">
+    <div class="container container--narrow">
+      <div class="tt-signup__inner">
+        <div class="tt-signup__text">
+          <h2>Join the Conversation</h2>
+          <p>The AnthroWorks Think Tank is an open forum for researchers, creatives, and practitioners invested in culture, ecology, and the future. Sign up to contribute to discussions, access research threads, and connect with a community thinking critically about people and place.</p>
+        </div>
+        <form class="tt-signup__form" action="#" method="POST" id="inlineSignupForm">
+          <div class="tt-signup__row">
+            <div class="tt-signup__field">
+              <label for="signup-name">Name</label>
+              <input type="text" id="signup-name" name="name" required>
+            </div>
+            <div class="tt-signup__field">
+              <label for="signup-email">Email</label>
+              <input type="email" id="signup-email" name="email" required>
+            </div>
+          </div>
+          <div class="tt-signup__field">
+            <label for="signup-domain">Area of Interest</label>
+            <select id="signup-domain" name="domain">
+              <option value="">Select a domain</option>
+              <option value="design">Collaborative Design Practice</option>
+              <option value="ecology">Eco-Human Design Centered</option>
+              <option value="technology">AI Technology &amp; Sciences</option>
+              <option value="geopolitics">Geo-Political Climates</option>
+              <option value="all">All Domains</option>
+            </select>
+          </div>
+          <div class="tt-signup__field">
+            <label for="signup-bio">Tell us about your practice <span style="color:var(--text-muted);font-weight:400;">(optional)</span></label>
+            <textarea id="signup-bio" name="bio" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn">Join the Think Tank</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ===== ACCESS POPUP ===== -->
+  <div class="tt-modal" id="accessModal">
+    <div class="tt-modal__backdrop" id="modalBackdrop"></div>
+    <div class="tt-modal__content">
+      <button class="tt-modal__close" id="modalClose">&times;</button>
+      <div class="tt-modal__header">
+        <h2>Join the Think Tank</h2>
+        <p>Gain access to the AnthroWorks forum &mdash; contribute to discussions, access research threads, and connect with a community thinking critically about people, place, and culture.</p>
+      </div>
+      <form class="tt-modal__form" action="#" method="POST">
+        <div class="tt-modal__row">
+          <div class="tt-modal__field">
+            <label for="modal-name">Name</label>
+            <input type="text" id="modal-name" name="name" required>
+          </div>
+          <div class="tt-modal__field">
+            <label for="modal-email">Email</label>
+            <input type="email" id="modal-email" name="email" required>
+          </div>
+        </div>
+        <div class="tt-modal__field">
+          <label for="modal-domain">Area of Interest</label>
+          <select id="modal-domain" name="domain">
+            <option value="">Select a domain</option>
+            <option value="design">Collaborative Design Practice</option>
+            <option value="ecology">Eco-Human Design Centered</option>
+            <option value="technology">AI Technology &amp; Sciences</option>
+            <option value="geopolitics">Geo-Political Climates</option>
+            <option value="all">All Domains</option>
+          </select>
+        </div>
+        <div class="tt-modal__field">
+          <label for="modal-bio">Tell us about your practice <span style="color:var(--text-muted);font-weight:400;">(optional)</span></label>
+          <textarea id="modal-bio" name="bio" rows="3" placeholder="Researcher, designer, student, practitioner..."></textarea>
+        </div>
+        <button type="submit" class="btn tt-modal__submit">Request Access</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <a href="index.html" class="footer__logo">AnthroWorks.</a>
+        <div class="footer__socials">
+          <a href="https://x.com/anthroworks" target="_blank" rel="noopener">X</a>
+          <a href="https://www.linkedin.com/company/anthroworks" target="_blank" rel="noopener">in</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    document.getElementById('navToggle')?.addEventListener('click', () => {
+      document.getElementById('navLinks').classList.toggle('active');
+    });
+
+    // Nav scroll
+    window.addEventListener('scroll', () => {
+      document.querySelector('.nav').classList.toggle('nav--scrolled', window.scrollY > 50);
+    });
+
+    // Smooth scroll to domains
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Forum category filter
+    document.querySelectorAll('.tt-forum__cat').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tt-forum__cat').forEach(b => b.classList.remove('tt-forum__cat--active'));
+        btn.classList.add('tt-forum__cat--active');
+
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.tt-thread').forEach(thread => {
+          if (filter === 'all' || thread.dataset.category === filter) {
+            thread.style.display = '';
+          } else {
+            thread.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Access modal
+    const modal = document.getElementById('accessModal');
+    let hasSignedUp = sessionStorage.getItem('tt-access');
+
+    const openModal = () => {
+      modal.classList.add('tt-modal--active');
+      document.body.style.overflow = 'hidden';
+    };
+    const closeModal = () => {
+      modal.classList.remove('tt-modal--active');
+      document.body.style.overflow = '';
+    };
+
+    // Auto-open popup on page load (first lead) unless already signed up this session
+    if (!hasSignedUp) {
+      setTimeout(openModal, 1200);
+    }
+
+    document.getElementById('openAccessBtn').addEventListener('click', openModal);
+    document.getElementById('modalBackdrop').addEventListener('click', closeModal);
+    document.getElementById('modalClose').addEventListener('click', closeModal);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    // Discussion threads are now links — no modal trigger needed
+
+    // Modal form submit
+    document.querySelector('.tt-modal__form').addEventListener('submit', e => {
+      e.preventDefault();
+      sessionStorage.setItem('tt-access', 'true');
+      const content = document.querySelector('.tt-modal__content');
+      content.innerHTML = '<div class="tt-modal__success"><h2>Welcome to the Think Tank</h2><p>We\'ve received your request. You\'ll receive an email with forum access details shortly.</p><button class="btn" onclick="document.getElementById(\'accessModal\').classList.remove(\'tt-modal--active\'); document.body.style.overflow=\'\';">Close</button></div>';
+    });
+
+    // Inline form submit (second lead)
+    document.getElementById('inlineSignupForm')?.addEventListener('submit', e => {
+      e.preventDefault();
+      sessionStorage.setItem('tt-access', 'true');
+      const form = e.target;
+      form.innerHTML = '<div style="text-align:center;padding:2rem 0;"><h3 style="margin-bottom:0.75rem;">You\'re In</h3><p style="color:var(--text-light);font-size:0.9375rem;">Check your email for access details. Welcome to the Think Tank.</p></div>';
+    });
+  </script>
+</body>
+</html>
