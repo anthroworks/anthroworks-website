@@ -4,17 +4,20 @@ compatibility_date = "2026-04-15"
 # Worker is deployed to anthroworks.co.za/api/* via the route below.
 # The static site itself is served from Cloudflare Pages (or equivalent).
 
-# --- Routes (uncomment once the zone is set up in Cloudflare) ---
-# [[routes]]
-# pattern = "anthroworks.co.za/api/*"
-# zone_name = "anthroworks.co.za"
+# --- Routes ---
+[[routes]]
+pattern = "anthroworks.co.za/api/*"
+zone_name = "anthroworks.co.za"
+
+[[routes]]
+pattern = "www.anthroworks.co.za/api/*"
+zone_name = "anthroworks.co.za"
 
 # --- D1 binding ---
 [[d1_databases]]
 binding       = "DB"
 database_name = "anthroworks_leads"
-# Fill in via `wrangler d1 create anthroworks_leads` after first deploy:
-# database_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+database_id   = "e1e80cd2-80bd-4ad9-9652-ed6eff6d31d6"
 
 # --- Environment variables ---
 [vars]
