@@ -555,7 +555,49 @@ p { max-width: 65ch; }
 .form__field input:focus,
 .form__field textarea:focus { border-color: var(--text); }
 
+.form__field input[aria-invalid="true"],
+.form__field textarea[aria-invalid="true"],
+.form__field select[aria-invalid="true"] { border-color: #b3261e; }
+
 .form__field textarea { resize: vertical; }
+
+.form__error {
+  min-height: 1.1em;
+  font-size: 0.75rem;
+  color: #b3261e;
+  letter-spacing: 0.01em;
+}
+
+.form__error:empty { display: none; }
+
+.form__status {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  padding: 0.875rem 1rem;
+  border-left: 3px solid transparent;
+  background: transparent;
+}
+.form__status:empty { display: none; }
+.form__status--success {
+  border-left-color: #2e7d32;
+  background: rgba(46, 125, 50, 0.06);
+  color: #1b5e20;
+}
+.form__status--error {
+  border-left-color: #b3261e;
+  background: rgba(179, 38, 30, 0.06);
+  color: #8c1d18;
+}
+
+/* Honeypot — visually and from-AT hidden, but still focusable for bots */
+.form__honeypot {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 
 .btn {
   display: inline-block;

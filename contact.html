@@ -83,20 +83,28 @@
             </ul>
           </div>
         </div>
-        <form class="contact__form" id="contactForm" action="#" method="POST">
+        <form class="contact__form" id="contactForm" action="/api/leads" method="POST" novalidate>
+          <!-- Honeypot — real users leave this empty; bots fill it in -->
+          <div class="form__honeypot" aria-hidden="true">
+            <label for="website">Website</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+
           <div class="form__row">
             <div class="form__field">
               <label for="name">Name</label>
-              <input type="text" id="name" name="name" required>
+              <input type="text" id="name" name="name" required minlength="2" maxlength="120" autocomplete="name">
+              <span class="form__error" data-for="name"></span>
             </div>
             <div class="form__field">
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
+              <input type="email" id="email" name="email" required maxlength="160" autocomplete="email">
+              <span class="form__error" data-for="email"></span>
             </div>
           </div>
           <div class="form__field">
             <label for="company">Company <span style="color: var(--text-muted); font-weight: 400;">(optional)</span></label>
-            <input type="text" id="company" name="company">
+            <input type="text" id="company" name="company" maxlength="160" autocomplete="organization">
           </div>
           <div class="form__field">
             <label for="subject">Subject</label>
@@ -109,12 +117,17 @@
               <option value="investment">Investment</option>
               <option value="other">Other</option>
             </select>
+            <span class="form__error" data-for="subject"></span>
           </div>
           <div class="form__field">
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
+            <textarea id="message" name="message" rows="6" required minlength="10" maxlength="5000"></textarea>
+            <span class="form__error" data-for="message"></span>
           </div>
-          <button type="submit" class="btn">Send Message</button>
+
+          <div class="form__status" id="formStatus" role="status" aria-live="polite"></div>
+
+          <button type="submit" class="btn" id="formSubmit">Send Message</button>
         </form>
       </div>
     </div>
@@ -152,23 +165,99 @@
       document.querySelector('.nav').classList.toggle('nav--scrolled', window.scrollY > 50);
     });
 
-    // Form handler (placeholder — replace with Cloudflare Worker endpoint)
-    document.getElementById('contactForm')?.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const btn = e.target.querySelector('button[type="submit"]');
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
+    // Contact form — POSTs JSON to the AnthroWorks Worker at /api/leads.
+    // For local dev against `wrangler dev`, override via:
+    //   <meta name="lead-endpoint" content="http://localhost:8787/api/leads">
+    (function initContactForm() {
+      const form = document.getElementById('contactForm');
+      if (!form) return;
 
-      // TODO: Replace with actual Cloudflare Worker form endpoint
-      setTimeout(() => {
-        btn.textContent = 'Message Sent';
-        e.target.reset();
-        setTimeout(() => {
-          btn.textContent = 'Send Message';
+      const endpoint =
+        document.querySelector('meta[name="lead-endpoint"]')?.content ||
+        '/api/leads';
+
+      const btn        = document.getElementById('formSubmit');
+      const statusEl   = document.getElementById('formStatus');
+      const errorEls   = form.querySelectorAll('.form__error');
+
+      const FIELD_ERRORS = {
+        required:   'This field is required.',
+        invalid:    'Please check this field.',
+        too_short:  'Please write a little more (10+ characters).',
+      };
+
+      function clearErrors() {
+        errorEls.forEach(el => { el.textContent = ''; });
+        statusEl.textContent = '';
+        statusEl.className = 'form__status';
+      }
+
+      function setFieldError(name, code) {
+        const el = form.querySelector(`.form__error[data-for="${name}"]`);
+        if (el) el.textContent = FIELD_ERRORS[code] || 'Please check this field.';
+      }
+
+      function setStatus(kind, msg) {
+        statusEl.textContent = msg;
+        statusEl.className = `form__status form__status--${kind}`;
+      }
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        clearErrors();
+
+        const data = Object.fromEntries(new FormData(form).entries());
+
+        // Client-side pre-check (mirrors Worker rules, keeps UX snappy)
+        if (!data.name || data.name.trim().length < 2)       return setFieldError('name', 'required');
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(data.email)) return setFieldError('email', 'invalid');
+        if (!data.subject)                                   return setFieldError('subject', 'required');
+        if (!data.message || data.message.trim().length < 10) return setFieldError('message', 'too_short');
+
+        btn.disabled = true;
+        const originalLabel = btn.textContent;
+        btn.textContent = 'Sending…';
+
+        try {
+          const res = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+          });
+
+          if (res.ok) {
+            form.reset();
+            setStatus('success', 'Thanks — your message is in. We respond within two business days.');
+            btn.textContent = 'Message sent';
+            setTimeout(() => {
+              btn.textContent = originalLabel;
+              btn.disabled = false;
+            }, 4000);
+            return;
+          }
+
+          let payload = {};
+          try { payload = await res.json(); } catch {}
+
+          if (res.status === 422 && payload.fields) {
+            Object.entries(payload.fields).forEach(([name, code]) => setFieldError(name, code));
+            setStatus('error', 'A few fields need a quick fix.');
+          } else if (res.status === 403) {
+            setStatus('error', 'Submissions from this origin are not allowed. Email chad@anthroworks.co.za directly.');
+          } else {
+            setStatus('error', 'Something went wrong on our side. Please try again, or email chad@anthroworks.co.za.');
+          }
+
+          btn.textContent = originalLabel;
           btn.disabled = false;
-        }, 3000);
-      }, 1000);
-    });
+        } catch (err) {
+          console.error(err);
+          setStatus('error', 'Network error. Please try again, or email chad@anthroworks.co.za.');
+          btn.textContent = originalLabel;
+          btn.disabled = false;
+        }
+      });
+    })();
   </script>
 </body>
 </html>

@@ -1,0 +1,28 @@
+name            = "anthroworks-api"
+main            = "src/index.js"
+compatibility_date = "2026-04-15"
+# Worker is deployed to anthroworks.co.za/api/* via the route below.
+# The static site itself is served from Cloudflare Pages (or equivalent).
+
+# --- Routes (uncomment once the zone is set up in Cloudflare) ---
+# [[routes]]
+# pattern = "anthroworks.co.za/api/*"
+# zone_name = "anthroworks.co.za"
+
+# --- D1 binding ---
+[[d1_databases]]
+binding       = "DB"
+database_name = "anthroworks_leads"
+# Fill in via `wrangler d1 create anthroworks_leads` after first deploy:
+# database_id = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+
+# --- Environment variables ---
+[vars]
+ALLOWED_ORIGINS  = "https://anthroworks.co.za,https://www.anthroworks.co.za,http://localhost:8085"
+NOTIFY_TO        = "chad@anthroworks.co.za"
+NOTIFY_FROM      = "AnthroWorks Website <no-reply@anthroworks.co.za>"
+TURNSTILE_ENABLED = "false"
+
+# --- Secrets (set via `wrangler secret put NAME`) ---
+# RESEND_API_KEY       — for email notifications via Resend (optional; storage works without it)
+# TURNSTILE_SECRET_KEY — if TURNSTILE_ENABLED=true

@@ -1,0 +1,14 @@
+{
+  "name": "anthroworks-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Cloudflare Worker: lead capture + contact form backend for anthroworks.co.za",
+  "scripts": {
+    "dev": "wrangler dev --port 8787 --local",
+    "deploy": "wrangler deploy",
+    "db:init:local":  "wrangler d1 execute anthroworks_leads --local  --file=schema.sql",
+    "db:init:remote": "wrangler d1 execute anthroworks_leads --remote --file=schema.sql",
+    "tail": "wrangler tail"
+  }
+}
